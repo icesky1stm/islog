@@ -1,7 +1,6 @@
 ### 基本参数定义
 BIN  := islog.so
 
-SRC  += istime.c
 SRC  += islog.c
 
 # 定义基本路径
@@ -35,7 +34,7 @@ all: $(BIN)
 
 $(BIN): $(OBJ)
 	$(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
-	cp islib.so test/islib.so
+	cp ./islog.so ./test/islog.so
 
 .PHONY:test
 test:
